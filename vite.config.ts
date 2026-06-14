@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
+  // 部署到 GitHub Pages 子路径（https://<user>.github.io/<repo>/）
+  // 必须设置 base，否则构建产物里的 JS/CSS 路径会从根域开始查找导致 404
+  base: '/SqueezePic/',
   plugins: [react()],
   resolve: {
     alias: {
